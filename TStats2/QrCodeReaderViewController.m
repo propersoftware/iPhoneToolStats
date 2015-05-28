@@ -32,6 +32,7 @@
     QrOutlineView *_boundingBox;
     NSTimer *_boxHideTimer;
     UILabel *_decodedMessage;
+    UIImageView *_targetImage;
 }
 
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
@@ -87,7 +88,8 @@ ScanDatabase* db;
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.view.backgroundColor = [UIColor clearColor];
-    self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
+    //self.navigationController.navigationBar.alpha = 0.5f;
+    //self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
     
     // here we unhide the lower navigation controller
     [self.navigationController setToolbarHidden:YES];
@@ -98,7 +100,6 @@ ScanDatabase* db;
     self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"logo_ios_xsm2.png"]];
     
     //[[UIDevice currentDevice]setValue:[NSNumber numberWithInteger:UIInterfaceOrientationPortrait] forKey:@"orientation"];
-    
 
     if (![self startReading]) {
         [self startReading];
@@ -162,6 +163,16 @@ ScanDatabase* db;
     _decodedMessage.textColor = [UIColor darkGrayColor];
     _decodedMessage.textAlignment = NSTextAlignmentCenter;
     //[self.view addSubview:_decodedMessage];
+    
+    // here we add, center, and auto-fix margins programmatically for "target" image
+    _targetImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lens_target.png"]];
+    _targetImage.center = self.view.center;
+    _targetImage.autoresizingMask = (UIViewAutoresizingFlexibleLeftMargin |
+                                  UIViewAutoresizingFlexibleRightMargin|
+                                  UIViewAutoresizingFlexibleTopMargin  |
+                                  UIViewAutoresizingFlexibleBottomMargin);
+    [self.view addSubview:_targetImage];
+    // end test
     
     // Start the AVSession running
     [session startRunning];
@@ -277,6 +288,7 @@ ScanDatabase* db;
     return AVCaptureVideoOrientationPortrait;
 }
 
+
 // here we implement method to stop scanning
 - (void) stopReading {
     //[self.indicator startAnimating];
@@ -304,6 +316,7 @@ ScanDatabase* db;
         // Hide the box and remove the decoded text
         _boundingBox.hidden = YES;
         [_previewLayer removeFromSuperlayer];
+        [_targetImage removeFromSuperview]; // here we remove the lens_target view from the display
         _bottomMaskView.hidden = NO;
         _topMaskView.hidden = NO;
         _topMaskView.layer.cornerRadius = 10;
@@ -347,15 +360,29 @@ ScanDatabase* db;
         bool isSuccess = [db saveData];
         
         if (isSuccess) {
-            // here we move to next view since we found the project number
-            [self performSegueWithIdentifier:@"ShowProjectMenuView" sender:self];
+            
+            /*
+            // here we add a delay method - this has been replaced by the goToNextView method below
+            double delayInSeconds = 0.5;
+            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds *NSEC_PER_SEC));
+            dispatch_after(popTime, dispatch_get_main_queue(),^(void){
+                // here we move to next view since we found the project number
+                [self performSegueWithIdentifier:@"ShowProjectMenuView" sender:self];
+            });
+             */
+            [self performSelector:@selector(goToNextView) withObject:nil afterDelay:0.5];
         }
     }
 }
 
+- (void)goToNextView {
+    [self performSegueWithIdentifier:@"ShowProjectMenuView" sender:self];
+}
+
 // here we implement sound
 - (void) loadBeepSound {
-    NSString *beepFilePath = [[NSBundle mainBundle]pathForResource:@"beep" ofType:@"mp3"];
+    //NSString *beepFilePath = [[NSBundle mainBundle]pathForResource:@"beep" ofType:@"mp3"];
+    NSString * beepFilePath = [[NSBundle mainBundle]pathForResource:@"BeepV6" ofType:@"mp3"];
     NSURL *beepURL = [NSURL URLWithString:beepFilePath];
     NSError *error;
     
@@ -386,5 +413,7 @@ ScanDatabase* db;
 - (IBAction)dismissViewController:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+
 
 @end

@@ -188,6 +188,7 @@
     NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init]; // make the request to the api
+    //[request setURL:[NSURL URLWithString:@"http://toolstatsinfo.com/json/PostGpsDataIos/"]];
     [request setURL:[NSURL URLWithString:@"http://toolstatsinfo.com/json/PostGpsDataAndroid/"]];
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];

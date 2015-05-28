@@ -61,7 +61,8 @@ ScanDatabase*  db;
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.view.backgroundColor = [UIColor clearColor];
-    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+    //self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+    self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
     
     [self.rememberMeSegment setTitle:@"Yes" forSegmentAtIndex:0];
     [self.rememberMeSegment setTitle:@"No" forSegmentAtIndex:1];

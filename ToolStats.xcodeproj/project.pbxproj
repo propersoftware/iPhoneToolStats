@@ -64,6 +64,9 @@
 		F765F2E81AF7AA1100DEE184 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F765F2E61AF7AA1100DEE184 /* Icon.png */; };
 		F765F2E91AF7AA1100DEE184 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F765F2E71AF7AA1100DEE184 /* Icon@2x.png */; };
 		F783D3311AEA8698009065FA /* RecentScansViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F783D3301AEA8698009065FA /* RecentScansViewController.m */; };
+		F793DCF11B0E0208009820E3 /* BeepV6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F793DCEF1B0E0208009820E3 /* BeepV6.mp3 */; };
+		F793DCF21B0E0208009820E3 /* BeepV8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F793DCF01B0E0208009820E3 /* BeepV8.mp3 */; };
+		F793DCF61B0E6499009820E3 /* lens_target.png in Resources */ = {isa = PBXBuildFile; fileRef = F793DCF51B0E6499009820E3 /* lens_target.png */; };
 		F7F850051ADC4D8100AD1A23 /* CustomerLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F850041ADC4D8100AD1A23 /* CustomerLoginViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -155,6 +158,9 @@
 		F765F2E71AF7AA1100DEE184 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		F783D32F1AEA8698009065FA /* RecentScansViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentScansViewController.h; sourceTree = "<group>"; };
 		F783D3301AEA8698009065FA /* RecentScansViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentScansViewController.m; sourceTree = "<group>"; };
+		F793DCEF1B0E0208009820E3 /* BeepV6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BeepV6.mp3; sourceTree = "<group>"; };
+		F793DCF01B0E0208009820E3 /* BeepV8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BeepV8.mp3; sourceTree = "<group>"; };
+		F793DCF51B0E6499009820E3 /* lens_target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lens_target.png; sourceTree = "<group>"; };
 		F7F850031ADC4D8100AD1A23 /* CustomerLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerLoginViewController.h; sourceTree = "<group>"; };
 		F7F850041ADC4D8100AD1A23 /* CustomerLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -247,8 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				F7301C231AEAC76000B3C7C6 /* ChecklistItem.h */,
-				F7301C241AEAC76000B3C7C6 /* ChecklistItem.m */,
 				F7394E581AD6C6E7001AA9D3 /* Sounds */,
+				F7301C241AEAC76000B3C7C6 /* ChecklistItem.m */,
 				F7394E571AD6C6D5001AA9D3 /* Images */,
 				F7394DB61AD45C71001AA9D3 /* Info.plist */,
 				F7394DB71AD45C71001AA9D3 /* main.m */,
@@ -291,6 +297,7 @@
 				F765F2D61AF5D7E900DEE184 /* map_new.png */,
 				F765F2D71AF5D7E900DEE184 /* map_new2.png */,
 				F765F2DA1AF5ED8700DEE184 /* map_new3.png */,
+				F793DCF51B0E6499009820E3 /* lens_target.png */,
 				F765F2DB1AF5ED8700DEE184 /* map_new4.png */,
 				F765F2CB1AF3A6E100DEE184 /* glyphicons-145-folder-open_color.png */,
 				F765F2CC1AF3A6E100DEE184 /* glyphicons-155-more-windows_color.png */,
@@ -315,6 +322,8 @@
 		F7394E581AD6C6E7001AA9D3 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				F793DCEF1B0E0208009820E3 /* BeepV6.mp3 */,
+				F793DCF01B0E0208009820E3 /* BeepV8.mp3 */,
 				F7394E591AD6C6FA001AA9D3 /* beep.mp3 */,
 			);
 			name = Sounds;
@@ -412,6 +421,7 @@
 			files = (
 				F765F2D31AF5672400DEE184 /* web.png in Resources */,
 				F765F2E91AF7AA1100DEE184 /* Icon@2x.png in Resources */,
+				F793DCF61B0E6499009820E3 /* lens_target.png in Resources */,
 				F765F2A41AF2BF6000DEE184 /* logo_ios_header.png in Resources */,
 				F7394E501AD5BD77001AA9D3 /* logo_ios_xsm.png in Resources */,
 				F765F2AD1AF35D2900DEE184 /* GeneralInfo.png in Resources */,
@@ -436,6 +446,7 @@
 				F765F2CE1AF3A6E100DEE184 /* glyphicons-145-folder-open_color.png in Resources */,
 				F765F2C31AF3982300DEE184 /* glyphicons-259-qrcode_b1.png in Resources */,
 				F765F2DD1AF5ED8700DEE184 /* map_new4.png in Resources */,
+				F793DCF11B0E0208009820E3 /* BeepV6.mp3 in Resources */,
 				F765F2641AF2700600DEE184 /* halflings-39-qrcode_b1.png in Resources */,
 				F7394DC61AD45C71001AA9D3 /* LaunchScreen.xib in Resources */,
 				F765F25D1AF26FC900DEE184 /* LaunchScreen.xib in Resources */,
@@ -443,6 +454,7 @@
 				F765F2DC1AF5ED8700DEE184 /* map_new3.png in Resources */,
 				F765F2C71AF3A4DE00DEE184 /* halflings-62-map-marker_color.png in Resources */,
 				F765F2D51AF56CDC00DEE184 /* web30.png in Resources */,
+				F793DCF21B0E0208009820E3 /* BeepV8.mp3 in Resources */,
 				F7394DC31AD45C71001AA9D3 /* Images.xcassets in Resources */,
 				F765F2651AF2700600DEE184 /* halflings-62-map-marker.png in Resources */,
 				F765F2D91AF5D7E900DEE184 /* map_new2.png in Resources */,

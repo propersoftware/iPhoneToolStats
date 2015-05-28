@@ -208,6 +208,9 @@ NSString *button3Id = @"copyUrlToClipboardButton";
     if(!isCopied) {
         isCopied = TRUE;
         [[UIPasteboard generalPasteboard] setString:theDataObject.appURL.absoluteString];
+    } else {
+        [[UIPasteboard generalPasteboard] setString:@""];
+        [[UIPasteboard generalPasteboard] setString:theDataObject.appURL.absoluteString];
     }
 }
 

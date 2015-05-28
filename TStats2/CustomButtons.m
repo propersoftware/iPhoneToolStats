@@ -33,7 +33,7 @@
     UIColor* color2 = [UIColor colorWithRed: 0.113 green: 0.344 blue: 0.545 alpha: 1];
     
     //// Rectangle Drawing
-    UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRoundedRect: CGRectMake(15, 7, 240, 50) cornerRadius: 10];
+    UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRoundedRect: CGRectMake(15, 7, 240, 60) cornerRadius: 0];
     [color setFill];
     [rectanglePath fill];
     [color2 setStroke];

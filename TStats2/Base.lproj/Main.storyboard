@@ -18,76 +18,111 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKn-LA-nqA" customClass="CustomButtons">
-                                <rect key="frame" x="165" y="370" width="270" height="63"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oaG-r0-jFW">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vgX-Wt-p0R" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="460"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6K-Yf-188" userLabel="Scan" customClass="CustomButtons">
+                                                <rect key="frame" x="165" y="115" width="270" height="73"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="270" id="kMX-Lv-WIC"/>
+                                                    <constraint firstAttribute="height" constant="73" id="uXB-Sc-05Z"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <size key="titleShadowOffset" width="5" height="5"/>
+                                                <state key="normal" title="               Scan" image="halflings-39-qrcode_color.png">
+                                                    <color key="titleColor" red="0.16862745579999999" green="0.52156865600000002" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="ioc-XN-4Tp" kind="show" id="mMt-kd-QDZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYP-YB-IUQ" customClass="CustomButtons">
+                                                <rect key="frame" x="165" y="198" width="270" height="73"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="73" id="80Z-gw-bJm"/>
+                                                    <constraint firstAttribute="width" constant="270" id="OzW-rw-ke1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="          Recent Scans" image="glyphicons-58-history_color.png">
+                                                    <color key="titleColor" red="0.16862745579999999" green="0.52156865600000002" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="MJ4-cR-ckM" kind="show" id="qFl-wS-7Db"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKn-LA-nqA" customClass="CustomButtons">
+                                                <rect key="frame" x="165" y="281" width="270" height="73"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="73" id="UMh-N7-Fxb"/>
+                                                    <constraint firstAttribute="width" constant="270" id="yPL-g3-Mp5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="          Goto Web App" image="globeD.png">
+                                                    <color key="titleColor" red="0.16862745579999999" green="0.52156865600000002" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="gotoWebApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kKY-0b-HPE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="mKn-LA-nqA" firstAttribute="top" secondItem="dYP-YB-IUQ" secondAttribute="bottom" constant="10" id="2iI-tC-A54"/>
+                                            <constraint firstItem="K6K-Yf-188" firstAttribute="top" secondItem="vgX-Wt-p0R" secondAttribute="top" constant="153" id="3IT-zd-To8"/>
+                                            <constraint firstAttribute="centerX" secondItem="K6K-Yf-188" secondAttribute="centerX" id="Hfv-FZ-nLy"/>
+                                            <constraint firstAttribute="centerY" secondItem="dYP-YB-IUQ" secondAttribute="centerY" constant="-4.5" id="PKk-lp-a7n"/>
+                                            <constraint firstItem="dYP-YB-IUQ" firstAttribute="top" secondItem="K6K-Yf-188" secondAttribute="bottom" constant="10" id="m7u-aj-7QZ"/>
+                                            <constraint firstAttribute="centerX" secondItem="dYP-YB-IUQ" secondAttribute="centerX" id="rVv-QA-p20"/>
+                                            <constraint firstItem="K6K-Yf-188" firstAttribute="top" secondItem="vgX-Wt-p0R" secondAttribute="top" constant="115" id="rc4-y6-qEE"/>
+                                            <constraint firstAttribute="centerX" secondItem="mKn-LA-nqA" secondAttribute="centerX" id="v2a-WY-rhX"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="3IT-zd-To8"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="3kx-36-AL4"/>
-                                    <constraint firstAttribute="width" constant="270" id="AMf-18-bz0"/>
+                                    <constraint firstItem="vgX-Wt-p0R" firstAttribute="top" secondItem="oaG-r0-jFW" secondAttribute="top" id="Qwi-sA-cPo"/>
+                                    <constraint firstAttribute="trailing" secondItem="vgX-Wt-p0R" secondAttribute="trailing" id="ZZs-1S-EoJ"/>
+                                    <constraint firstItem="vgX-Wt-p0R" firstAttribute="leading" secondItem="oaG-r0-jFW" secondAttribute="leading" id="a6Z-oi-XXW"/>
+                                    <constraint firstAttribute="bottom" secondItem="vgX-Wt-p0R" secondAttribute="bottom" id="emd-2h-FPe"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="          Goto Web App" image="globeD.png">
-                                    <color key="titleColor" red="0.16862745579999999" green="0.52156865600000002" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="gotoWebApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kKY-0b-HPE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYP-YB-IUQ" customClass="CustomButtons">
-                                <rect key="frame" x="165" y="299" width="270" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="270" id="gER-1A-baG"/>
-                                    <constraint firstAttribute="height" constant="63" id="pbE-Ig-58O"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="          Recent Scans" image="glyphicons-58-history_color.png">
-                                    <color key="titleColor" red="0.16862745579999999" green="0.52156865600000002" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="MJ4-cR-ckM" kind="show" id="qFl-wS-7Db"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6K-Yf-188" customClass="CustomButtons">
-                                <rect key="frame" x="165" y="228" width="270" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="l9o-WU-hr0"/>
-                                    <constraint firstAttribute="width" constant="270" id="u53-hf-75F"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <size key="titleShadowOffset" width="5" height="5"/>
-                                <state key="normal" title="               Scan" image="halflings-39-qrcode_color.png">
-                                    <color key="titleColor" red="0.16862745579999999" green="0.52156865600000002" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ioc-XN-4Tp" kind="show" id="mMt-kd-QDZ"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_ios_header.png" translatesAutoresizingMaskIntoConstraints="NO" id="hR7-Ja-ewJ">
                                 <rect key="frame" x="165" y="72" width="270" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="1hR-TB-po6"/>
+                                    <constraint firstAttribute="height" constant="60" id="8tE-xm-ytC"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mKn-LA-nqA" firstAttribute="top" secondItem="dYP-YB-IUQ" secondAttribute="bottom" constant="8" id="8Jf-5G-ELb"/>
+                            <constraint firstItem="oaG-r0-jFW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0QO-GD-wSp"/>
+                            <constraint firstAttribute="centerX" secondItem="hR7-Ja-ewJ" secondAttribute="centerX" id="0Qs-eL-sHB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oaG-r0-jFW" secondAttribute="bottom" id="694-HJ-H0p"/>
                             <constraint firstItem="hR7-Ja-ewJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="9Qn-TI-D2H"/>
-                            <constraint firstAttribute="centerX" secondItem="K6K-Yf-188" secondAttribute="centerX" id="Db2-vt-YS5"/>
-                            <constraint firstAttribute="centerX" secondItem="dYP-YB-IUQ" secondAttribute="centerX" id="Orv-xL-Eyg"/>
-                            <constraint firstAttribute="centerX" secondItem="mKn-LA-nqA" secondAttribute="centerX" id="TkD-UO-Wqr"/>
-                            <constraint firstAttribute="centerX" secondItem="hR7-Ja-ewJ" secondAttribute="centerX" id="Z4M-Jc-hdV"/>
-                            <constraint firstAttribute="centerY" secondItem="dYP-YB-IUQ" secondAttribute="centerY" constant="-30" id="aR5-wL-oMQ"/>
-                            <constraint firstItem="dYP-YB-IUQ" firstAttribute="top" secondItem="K6K-Yf-188" secondAttribute="bottom" constant="8" id="uGc-18-ORc"/>
+                            <constraint firstAttribute="trailing" secondItem="oaG-r0-jFW" secondAttribute="trailing" id="DLr-Hi-jMq"/>
+                            <constraint firstItem="oaG-r0-jFW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="irE-ue-1WO"/>
+                            <constraint firstAttribute="width" secondItem="vgX-Wt-p0R" secondAttribute="width" id="t00-NF-PgH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Rgg-PL-lLS"/>
@@ -209,71 +244,103 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="sendGpsInfoButton" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKE-Nw-Z2E" customClass="CustomButtons">
-                                <rect key="frame" x="165" y="309" width="270" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="270" id="8o2-Nw-PpE"/>
-                                    <constraint firstAttribute="height" constant="63" id="l1I-eu-egs"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="          Send GPS Info" image="halflings-62-map-marker_color.png">
-                                    <color key="titleColor" red="0.16862745579999999" green="0.52156865600000002" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToCustomerLogin:" destination="Jf7-eq-NWE" eventType="touchUpInside" id="BPL-Rm-33l"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="copyUrlToClipboardButton" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYE-CK-j0g" customClass="CustomButtons">
-                                <rect key="frame" x="165" y="382" width="270" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="270" id="6Kw-SC-aA9"/>
-                                    <constraint firstAttribute="height" constant="63" id="lPW-f8-YUF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="     Copy URL To Clipboard" image="glyphicons-155-more-windows_color.png">
-                                    <color key="titleColor" red="0.16862745579999999" green="0.52156865600000002" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="urlCopyAction" destination="Jf7-eq-NWE" eventType="touchUpInside" id="SBp-px-gpI"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LU-dx-4Km">
-                                <rect key="frame" x="16" y="80" width="568" height="20.5"/>
+                                <rect key="frame" x="16" y="80" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.18823531269999999" green="0.52549022440000004" blue="0.66274511810000003" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="viewProjectButton" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZo-TG-zRR" customClass="CustomButtons">
-                                <rect key="frame" x="165" y="236" width="270" height="63"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n9N-uY-tK0">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEz-l5-b9L" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="60" width="600" height="278"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="sendGpsInfoButton" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKE-Nw-Z2E" customClass="CustomButtons">
+                                                <rect key="frame" x="169" y="113" width="270" height="73"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="270" id="8o2-Nw-PpE"/>
+                                                    <constraint firstAttribute="height" constant="73" id="l1I-eu-egs"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="          Send GPS Info" image="halflings-62-map-marker_color.png">
+                                                    <color key="titleColor" red="0.16862745579999999" green="0.52156865600000002" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="goToCustomerLogin:" destination="Jf7-eq-NWE" eventType="touchUpInside" id="BPL-Rm-33l"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="copyUrlToClipboardButton" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYE-CK-j0g" customClass="CustomButtons">
+                                                <rect key="frame" x="169" y="196" width="270" height="73"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="270" id="6Kw-SC-aA9"/>
+                                                    <constraint firstAttribute="height" constant="73" id="lPW-f8-YUF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="     Copy URL To Clipboard" image="glyphicons-155-more-windows_color.png">
+                                                    <color key="titleColor" red="0.16862745579999999" green="0.52156865600000002" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="urlCopyAction" destination="Jf7-eq-NWE" eventType="touchUpInside" id="SBp-px-gpI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="viewProjectButton" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZo-TG-zRR" customClass="CustomButtons">
+                                                <rect key="frame" x="169" y="30" width="270" height="73"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="73" id="b74-gN-f6x"/>
+                                                    <constraint firstAttribute="width" constant="270" id="veR-Cv-Fha"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="         View Project" image="glyphicons-145-folder-open_color.png">
+                                                    <color key="titleColor" red="0.16862745579999999" green="0.52156865600000002" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="goToCustomerLogin:" destination="Jf7-eq-NWE" eventType="touchUpInside" id="jri-XV-uKQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="centerX" secondItem="VKE-Nw-Z2E" secondAttribute="centerX" constant="-4" id="5Fs-ym-Srh"/>
+                                            <constraint firstItem="fYE-CK-j0g" firstAttribute="top" secondItem="VKE-Nw-Z2E" secondAttribute="bottom" constant="10" id="BMB-vJ-lHL"/>
+                                            <constraint firstItem="JZo-TG-zRR" firstAttribute="top" secondItem="AEz-l5-b9L" secondAttribute="top" constant="30" id="HVv-Vm-ZYD"/>
+                                            <constraint firstAttribute="centerX" secondItem="fYE-CK-j0g" secondAttribute="centerX" constant="-4" id="Hu0-sL-oBW"/>
+                                            <constraint firstAttribute="centerX" secondItem="JZo-TG-zRR" secondAttribute="centerX" constant="-4" id="Tza-NY-MH9"/>
+                                            <constraint firstAttribute="centerY" secondItem="VKE-Nw-Z2E" secondAttribute="centerY" constant="-10.5" id="i2w-Ob-hgR"/>
+                                            <constraint firstItem="VKE-Nw-Z2E" firstAttribute="top" secondItem="JZo-TG-zRR" secondAttribute="bottom" constant="10" id="ruu-RK-l80"/>
+                                            <constraint firstAttribute="centerY" secondItem="VKE-Nw-Z2E" secondAttribute="centerY" constant="-10.5" id="wcG-U4-4l9"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="wcG-U4-4l9"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="b74-gN-f6x"/>
-                                    <constraint firstAttribute="width" constant="270" id="veR-Cv-Fha"/>
+                                    <constraint firstItem="AEz-l5-b9L" firstAttribute="leading" secondItem="n9N-uY-tK0" secondAttribute="leading" id="6Xy-fA-PCn"/>
+                                    <constraint firstAttribute="trailing" secondItem="AEz-l5-b9L" secondAttribute="trailing" id="7mc-4U-z5F"/>
+                                    <constraint firstAttribute="bottom" secondItem="AEz-l5-b9L" secondAttribute="bottom" id="bhs-8S-Nxt"/>
+                                    <constraint firstItem="AEz-l5-b9L" firstAttribute="top" secondItem="n9N-uY-tK0" secondAttribute="top" constant="60" id="vRX-6h-PVO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="         View Project" image="glyphicons-145-folder-open_color.png">
-                                    <color key="titleColor" red="0.16862745579999999" green="0.52156865600000002" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToCustomerLogin:" destination="Jf7-eq-NWE" eventType="touchUpInside" id="jri-XV-uKQ"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpg-aM-SOZ" userLabel="Bottom Mask View">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="374"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yU8-zI-YiE" userLabel="Top Mask View">
                                         <rect key="frame" x="160" y="228" width="280" height="140"/>
@@ -318,9 +385,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="yU8-zI-YiE" secondAttribute="bottom" constant="6" id="EPd-Ti-k0B"/>
+                                    <constraint firstAttribute="centerY" secondItem="yU8-zI-YiE" secondAttribute="centerY" constant="2" id="Nt3-GE-M7f"/>
                                     <constraint firstAttribute="centerY" secondItem="yU8-zI-YiE" secondAttribute="centerY" constant="-109" id="Xfw-1F-tJu"/>
-                                    <constraint firstAttribute="centerX" secondItem="yU8-zI-YiE" secondAttribute="centerX" id="qeO-Cl-WAt"/>
+                                    <constraint firstAttribute="centerX" secondItem="yU8-zI-YiE" secondAttribute="centerX" id="qMT-SN-YN8"/>
                                     <constraint firstAttribute="centerY" secondItem="yU8-zI-YiE" secondAttribute="centerY" constant="-109" id="rBp-ED-xaw"/>
                                 </constraints>
                                 <variation key="default">
@@ -333,28 +400,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fYE-CK-j0g" firstAttribute="top" secondItem="VKE-Nw-Z2E" secondAttribute="bottom" constant="10" id="034-tZ-Z5j"/>
-                            <constraint firstItem="2LU-dx-4Km" firstAttribute="leading" secondItem="mnm-4C-2Kh" secondAttribute="leadingMargin" id="3Fh-qf-YN4"/>
-                            <constraint firstItem="JZo-TG-zRR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hld-Om-f9D" secondAttribute="bottom" constant="43" id="3oM-iH-udc"/>
-                            <constraint firstItem="2LU-dx-4Km" firstAttribute="top" secondItem="hld-Om-f9D" secondAttribute="bottom" constant="16" id="3tW-EF-gqe"/>
-                            <constraint firstAttribute="centerX" secondItem="fYE-CK-j0g" secondAttribute="centerX" id="AVT-K7-1er"/>
-                            <constraint firstAttribute="centerX" secondItem="VKE-Nw-Z2E" secondAttribute="centerX" id="B5M-5b-lW8"/>
-                            <constraint firstItem="fYE-CK-j0g" firstAttribute="top" secondItem="kpg-aM-SOZ" secondAttribute="bottom" constant="8" id="B7D-lq-ZNB"/>
-                            <constraint firstItem="kpg-aM-SOZ" firstAttribute="leading" secondItem="mnm-4C-2Kh" secondAttribute="leading" id="C23-HY-mxj"/>
-                            <constraint firstAttribute="centerY" secondItem="fYE-CK-j0g" secondAttribute="centerY" constant="-113" id="Npv-sp-iBY"/>
-                            <constraint firstItem="VKE-Nw-Z2E" firstAttribute="top" secondItem="JZo-TG-zRR" secondAttribute="bottom" constant="10" id="ULG-cr-jzi"/>
-                            <constraint firstItem="kpg-aM-SOZ" firstAttribute="top" secondItem="mnm-4C-2Kh" secondAttribute="top" id="Uro-Ib-3ru"/>
-                            <constraint firstAttribute="centerY" secondItem="2LU-dx-4Km" secondAttribute="centerY" constant="209.5" id="aDQ-rd-4nn"/>
-                            <constraint firstAttribute="centerX" secondItem="JZo-TG-zRR" secondAttribute="centerX" id="g1p-Fv-C0c"/>
-                            <constraint firstItem="2LU-dx-4Km" firstAttribute="trailing" secondItem="mnm-4C-2Kh" secondAttribute="trailingMargin" id="g5D-7S-hIM"/>
+                            <constraint firstItem="AEz-l5-b9L" firstAttribute="width" secondItem="mnm-4C-2Kh" secondAttribute="width" id="0yd-mE-cEk"/>
+                            <constraint firstAttribute="bottom" secondItem="kpg-aM-SOZ" secondAttribute="bottom" id="AJM-lB-2dl"/>
+                            <constraint firstItem="n9N-uY-tK0" firstAttribute="leading" secondItem="mnm-4C-2Kh" secondAttribute="leading" id="DMj-gX-dWT"/>
+                            <constraint firstItem="n9N-uY-tK0" firstAttribute="top" secondItem="mnm-4C-2Kh" secondAttribute="top" constant="64" id="EOT-3N-wF8"/>
+                            <constraint firstItem="kpg-aM-SOZ" firstAttribute="top" secondItem="mnm-4C-2Kh" secondAttribute="top" id="NJV-MP-SbG"/>
+                            <constraint firstAttribute="trailing" secondItem="n9N-uY-tK0" secondAttribute="trailing" id="aj5-8s-cuU"/>
+                            <constraint firstAttribute="centerX" secondItem="2LU-dx-4Km" secondAttribute="centerX" id="bnD-kE-squ"/>
+                            <constraint firstAttribute="trailing" secondItem="kpg-aM-SOZ" secondAttribute="trailing" id="cJW-uc-yd4"/>
+                            <constraint firstItem="2LU-dx-4Km" firstAttribute="top" secondItem="hld-Om-f9D" secondAttribute="bottom" constant="16" id="f4s-gF-ags"/>
+                            <constraint firstItem="2LU-dx-4Km" firstAttribute="leading" secondItem="mnm-4C-2Kh" secondAttribute="leading" constant="16" id="mhJ-i4-s2Q"/>
                             <constraint firstAttribute="bottom" secondItem="kpg-aM-SOZ" secondAttribute="bottom" id="qwZ-ld-BRm"/>
-                            <constraint firstAttribute="trailing" secondItem="kpg-aM-SOZ" secondAttribute="trailing" id="yL4-T4-3rU"/>
-                            <constraint firstAttribute="centerY" relation="greaterThanOrEqual" secondItem="VKE-Nw-Z2E" secondAttribute="centerY" constant="-40" id="yPg-If-dMd"/>
+                            <constraint firstAttribute="bottom" secondItem="n9N-uY-tK0" secondAttribute="bottom" id="rhd-sr-GiQ"/>
+                            <constraint firstItem="kpg-aM-SOZ" firstAttribute="leading" secondItem="mnm-4C-2Kh" secondAttribute="leading" id="t2K-GM-n3N"/>
+                            <constraint firstAttribute="trailing" secondItem="2LU-dx-4Km" secondAttribute="trailing" constant="16" id="y6e-KV-W7X"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="qwZ-ld-BRm"/>
-                                <exclude reference="aDQ-rd-4nn"/>
                             </mask>
                         </variation>
                     </view>
@@ -462,11 +525,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3A-IW-dtH" customClass="CustomButtons">
-                                                <rect key="frame" x="164" y="307" width="270" height="63"/>
+                                                <rect key="frame" x="164" y="297" width="270" height="73"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="63" id="3zR-6x-DYp"/>
+                                                    <constraint firstAttribute="height" constant="73" id="3zR-6x-DYp"/>
                                                     <constraint firstAttribute="width" constant="270" id="uSo-Ha-trW"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <state key="normal" title="Login">
                                                     <color key="titleColor" red="0.16862745579999999" green="0.52156865600000002" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -486,7 +550,7 @@
                                             <constraint firstItem="a3d-w4-G4u" firstAttribute="top" secondItem="xoV-Bo-PoB" secondAttribute="bottom" constant="8" id="YiU-yD-mCB"/>
                                             <constraint firstAttribute="centerX" secondItem="saP-yS-Coo" secondAttribute="centerX" constant="43.5" id="eFd-ij-pou"/>
                                             <constraint firstItem="saP-yS-Coo" firstAttribute="top" secondItem="MLP-UY-DhB" secondAttribute="bottom" constant="23" id="iRC-hU-kdb"/>
-                                            <constraint firstItem="M3A-IW-dtH" firstAttribute="top" secondItem="89M-ef-xGw" secondAttribute="bottom" constant="47" id="loe-Ho-uXg"/>
+                                            <constraint firstItem="M3A-IW-dtH" firstAttribute="top" secondItem="89M-ef-xGw" secondAttribute="bottom" constant="37" id="loe-Ho-uXg"/>
                                             <constraint firstItem="MLP-UY-DhB" firstAttribute="top" secondItem="c1s-f7-70e" secondAttribute="bottom" constant="8" id="nc2-bw-ga3"/>
                                             <constraint firstAttribute="centerX" secondItem="MLP-UY-DhB" secondAttribute="centerX" id="oNd-bA-3Pz"/>
                                             <constraint firstAttribute="centerX" secondItem="M3A-IW-dtH" secondAttribute="centerX" constant="1" id="oPm-L4-jm4"/>
@@ -583,81 +647,130 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="generalInfoButton" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ii8-w8-SXv" customClass="CustomButtons">
-                                <rect key="frame" x="165" y="196" width="270" height="63"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0fD-sH-26A">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7KC-HS-q98" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="347"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="generalInfoButton" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ii8-w8-SXv" customClass="CustomButtons">
+                                                <rect key="frame" x="165" y="0.0" width="270" height="73"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="73" id="FlT-Hr-ogj"/>
+                                                    <constraint firstAttribute="width" constant="270" id="aOo-Au-Rtx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="          General Info" image="GeneralInfo.png">
+                                                    <color key="titleColor" red="0.18823531269999999" green="0.52549022440000004" blue="0.66274511810000003" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="goToProjectView:" destination="yaG-1Q-d9D" eventType="touchUpInside" id="82X-Ds-j7s"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="toolSetupButton" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgq-Pw-51q" customClass="CustomButtons">
+                                                <rect key="frame" x="165" y="83" width="270" height="73"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="73" id="KvH-pX-hNr"/>
+                                                    <constraint firstAttribute="width" constant="270" id="hh7-6F-Ylk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="            Tool Setup" image="ToolSetup.png">
+                                                    <color key="titleColor" red="0.18823531269999999" green="0.52549022440000004" blue="0.66274511810000003" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="goToProjectView:" destination="yaG-1Q-d9D" eventType="touchUpInside" id="ghg-Cc-8Gp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="toolDesignInfoButton" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AX-iZ-YZL" customClass="CustomButtons">
+                                                <rect key="frame" x="165" y="166" width="270" height="73"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="270" id="ZNS-pu-fm2"/>
+                                                    <constraint firstAttribute="height" constant="73" id="i11-kF-mFG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="        Tool Design Info" image="ToolDesignInfo.png">
+                                                    <color key="titleColor" red="0.18823531269999999" green="0.52549022440000004" blue="0.66274511810000003" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="goToProjectView:" destination="yaG-1Q-d9D" eventType="touchUpInside" id="dX1-dJ-k4i"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="toolMaintenanceButton" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEa-t5-rah" customClass="CustomButtons">
+                                                <rect key="frame" x="165" y="249" width="270" height="73"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="270" id="ODl-Le-ZEt"/>
+                                                    <constraint firstAttribute="height" constant="73" id="omf-d9-VHT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="       Tool Maintenance" image="ToolMaintenance.png">
+                                                    <color key="titleColor" red="0.18823531269999999" green="0.52549022440000004" blue="0.66274511810000003" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="goToProjectView:" destination="yaG-1Q-d9D" eventType="touchUpInside" id="GD8-fE-uw4"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="DEa-t5-rah" firstAttribute="top" secondItem="9AX-iZ-YZL" secondAttribute="bottom" constant="10" id="3me-iU-0C0"/>
+                                            <constraint firstAttribute="centerY" secondItem="Ii8-w8-SXv" secondAttribute="centerY" constant="137" id="5Tc-jt-NYa"/>
+                                            <constraint firstAttribute="centerX" secondItem="Ii8-w8-SXv" secondAttribute="centerX" id="8nS-pk-pXZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="DEa-t5-rah" secondAttribute="bottom" constant="81" id="BKx-G3-pgP"/>
+                                            <constraint firstAttribute="centerX" secondItem="DEa-t5-rah" secondAttribute="centerX" id="CEM-ri-f83"/>
+                                            <constraint firstItem="Ii8-w8-SXv" firstAttribute="top" secondItem="7KC-HS-q98" secondAttribute="top" constant="80" id="GRN-79-3no"/>
+                                            <constraint firstItem="Tgq-Pw-51q" firstAttribute="top" secondItem="Ii8-w8-SXv" secondAttribute="bottom" constant="10" id="HRb-cO-lka"/>
+                                            <constraint firstItem="Ii8-w8-SXv" firstAttribute="top" secondItem="7KC-HS-q98" secondAttribute="top" id="HZ0-pH-OSP"/>
+                                            <constraint firstAttribute="centerX" secondItem="9AX-iZ-YZL" secondAttribute="centerX" id="NG8-Mf-8oR"/>
+                                            <constraint firstItem="Ii8-w8-SXv" firstAttribute="top" secondItem="7KC-HS-q98" secondAttribute="top" id="P9z-4J-pmY"/>
+                                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="DEa-t5-rah" secondAttribute="bottom" constant="95" id="XEr-Bd-oVA"/>
+                                            <constraint firstItem="9AX-iZ-YZL" firstAttribute="top" secondItem="Tgq-Pw-51q" secondAttribute="bottom" constant="10" id="Y3s-C1-Yd5"/>
+                                            <constraint firstAttribute="centerX" secondItem="Ii8-w8-SXv" secondAttribute="centerX" id="ceQ-A3-3G7"/>
+                                            <constraint firstAttribute="bottom" secondItem="DEa-t5-rah" secondAttribute="bottom" constant="25" id="d2W-Mv-Fpe"/>
+                                            <constraint firstAttribute="centerX" secondItem="Tgq-Pw-51q" secondAttribute="centerX" id="fqX-pF-fMp"/>
+                                            <constraint firstItem="Ii8-w8-SXv" firstAttribute="top" secondItem="7KC-HS-q98" secondAttribute="top" constant="80" id="fvM-y1-0ww"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="8nS-pk-pXZ"/>
+                                                <exclude reference="GRN-79-3no"/>
+                                                <exclude reference="HZ0-pH-OSP"/>
+                                                <exclude reference="fvM-y1-0ww"/>
+                                                <exclude reference="BKx-G3-pgP"/>
+                                                <exclude reference="XEr-Bd-oVA"/>
+                                                <exclude reference="d2W-Mv-Fpe"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="FlT-Hr-ogj"/>
-                                    <constraint firstAttribute="width" constant="270" id="aOo-Au-Rtx"/>
+                                    <constraint firstAttribute="bottom" secondItem="7KC-HS-q98" secondAttribute="bottom" constant="169" id="1gi-GF-BkZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="7KC-HS-q98" secondAttribute="bottom" constant="106" id="Sif-NL-R1p"/>
+                                    <constraint firstItem="7KC-HS-q98" firstAttribute="top" secondItem="0fD-sH-26A" secondAttribute="top" id="VhK-FX-brQ"/>
+                                    <constraint firstItem="7KC-HS-q98" firstAttribute="leading" secondItem="0fD-sH-26A" secondAttribute="leading" id="aU5-id-OoL"/>
+                                    <constraint firstAttribute="trailing" secondItem="7KC-HS-q98" secondAttribute="trailing" id="vm7-sb-W7R"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="          General Info" image="GeneralInfo.png">
-                                    <color key="titleColor" red="0.18823531269999999" green="0.52549022440000004" blue="0.66274511810000003" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToProjectView:" destination="yaG-1Q-d9D" eventType="touchUpInside" id="82X-Ds-j7s"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="toolDesignInfoButton" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AX-iZ-YZL" customClass="CustomButtons">
-                                <rect key="frame" x="165" y="329" width="270" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="270" id="ZNS-pu-fm2"/>
-                                    <constraint firstAttribute="height" constant="63" id="i11-kF-mFG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="        Tool Design Info" image="ToolDesignInfo.png">
-                                    <color key="titleColor" red="0.18823531269999999" green="0.52549022440000004" blue="0.66274511810000003" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToProjectView:" destination="yaG-1Q-d9D" eventType="touchUpInside" id="dX1-dJ-k4i"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="toolMaintenanceButton" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEa-t5-rah" customClass="CustomButtons">
-                                <rect key="frame" x="165" y="395" width="270" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="270" id="ODl-Le-ZEt"/>
-                                    <constraint firstAttribute="height" constant="63" id="omf-d9-VHT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="       Tool Maintenance" image="ToolMaintenance.png">
-                                    <color key="titleColor" red="0.18823531269999999" green="0.52549022440000004" blue="0.66274511810000003" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToProjectView:" destination="yaG-1Q-d9D" eventType="touchUpInside" id="GD8-fE-uw4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="toolSetupButton" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgq-Pw-51q" customClass="CustomButtons">
-                                <rect key="frame" x="165" y="263" width="270" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="KvH-pX-hNr"/>
-                                    <constraint firstAttribute="width" constant="270" id="hh7-6F-Ylk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="            Tool Setup" image="ToolSetup.png">
-                                    <color key="titleColor" red="0.18823531269999999" green="0.52549022440000004" blue="0.66274511810000003" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToProjectView:" destination="yaG-1Q-d9D" eventType="touchUpInside" id="ghg-Cc-8Gp"/>
-                                </connections>
-                            </button>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Sif-NL-R1p"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Tgq-Pw-51q" secondAttribute="centerX" id="DGl-rO-cTg"/>
-                            <constraint firstAttribute="centerY" secondItem="Ii8-w8-SXv" secondAttribute="centerY" constant="72" id="MTc-u3-oDp"/>
-                            <constraint firstAttribute="centerX" secondItem="Ii8-w8-SXv" secondAttribute="centerX" id="P4T-jt-cRL"/>
-                            <constraint firstAttribute="centerX" secondItem="DEa-t5-rah" secondAttribute="centerX" id="Uwz-V5-Wtb"/>
-                            <constraint firstAttribute="centerX" secondItem="9AX-iZ-YZL" secondAttribute="centerX" id="Zxb-58-RZh"/>
-                            <constraint firstAttribute="centerY" secondItem="DEa-t5-rah" secondAttribute="centerY" constant="-126" id="ign-Yh-Svo"/>
-                            <constraint firstAttribute="centerY" secondItem="Tgq-Pw-51q" secondAttribute="centerY" constant="6" id="rTK-rR-2ic"/>
-                            <constraint firstAttribute="centerY" secondItem="9AX-iZ-YZL" secondAttribute="centerY" constant="-60" id="tUd-ZX-QcQ"/>
+                            <constraint firstItem="0fD-sH-26A" firstAttribute="top" secondItem="jwT-R1-gyd" secondAttribute="bottom" id="kGK-4A-0jV"/>
+                            <constraint firstAttribute="trailing" secondItem="0fD-sH-26A" secondAttribute="trailing" id="t0U-VC-c0L"/>
+                            <constraint firstItem="0fD-sH-26A" firstAttribute="leading" secondItem="PfD-hZ-YkA" secondAttribute="leading" id="uly-6j-Wl4"/>
+                            <constraint firstAttribute="bottom" secondItem="0fD-sH-26A" secondAttribute="bottom" id="wGd-VR-leD"/>
+                            <constraint firstItem="7KC-HS-q98" firstAttribute="width" secondItem="PfD-hZ-YkA" secondAttribute="width" id="x3E-vU-K1L"/>
                         </constraints>
                     </view>
                     <connections>
@@ -784,7 +897,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyo-8q-iAq">
-                                                <rect key="frame" x="8" y="8" width="128.5" height="20.5"/>
+                                                <rect key="frame" x="8" y="8" width="129" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="128.5" id="9K4-M5-ROH"/>
                                                     <constraint firstAttribute="height" constant="20.5" id="e76-um-Khu"/>

@@ -226,7 +226,7 @@ NSArray *extensionArr;
     
     js = [NSString stringWithFormat:@"var meta = document.createElement('meta'); "
           "meta.setAttribute( 'name', 'viewport' ); "
-          "meta.setAttribute( 'content', 'width = device-width, initial-scale = 0.56, user-scalable = yes' ); "
+          "meta.setAttribute( 'content', 'width = device-width, initial-scale = 0.50, user-scalable = yes' ); "
           "document.getElementsByTagName('head')[0].appendChild(meta)"];
     //} else {
     [self.projectWebView stringByEvaluatingJavaScriptFromString:js];
