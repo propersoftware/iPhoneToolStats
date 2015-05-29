@@ -165,7 +165,8 @@ ScanDatabase* db;
     //[self.view addSubview:_decodedMessage];
     
     // here we add, center, and auto-fix margins programmatically for "target" image
-    _targetImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lens_target.png"]];
+    //_targetImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lens_target.png"]];
+    _targetImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"toolstats_target1.png"]];
     _targetImage.center = self.view.center;
     _targetImage.autoresizingMask = (UIViewAutoresizingFlexibleLeftMargin |
                                   UIViewAutoresizingFlexibleRightMargin|

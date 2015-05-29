@@ -67,6 +67,7 @@
 		F793DCF11B0E0208009820E3 /* BeepV6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F793DCEF1B0E0208009820E3 /* BeepV6.mp3 */; };
 		F793DCF21B0E0208009820E3 /* BeepV8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F793DCF01B0E0208009820E3 /* BeepV8.mp3 */; };
 		F793DCF61B0E6499009820E3 /* lens_target.png in Resources */ = {isa = PBXBuildFile; fileRef = F793DCF51B0E6499009820E3 /* lens_target.png */; };
+		F7E8B8381B181B7000E12BA9 /* toolstats_target1.png in Resources */ = {isa = PBXBuildFile; fileRef = F7E8B8371B181B7000E12BA9 /* toolstats_target1.png */; };
 		F7F850051ADC4D8100AD1A23 /* CustomerLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F850041ADC4D8100AD1A23 /* CustomerLoginViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +162,7 @@
 		F793DCEF1B0E0208009820E3 /* BeepV6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BeepV6.mp3; sourceTree = "<group>"; };
 		F793DCF01B0E0208009820E3 /* BeepV8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BeepV8.mp3; sourceTree = "<group>"; };
 		F793DCF51B0E6499009820E3 /* lens_target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lens_target.png; sourceTree = "<group>"; };
+		F7E8B8371B181B7000E12BA9 /* toolstats_target1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toolstats_target1.png; sourceTree = "<group>"; };
 		F7F850031ADC4D8100AD1A23 /* CustomerLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerLoginViewController.h; sourceTree = "<group>"; };
 		F7F850041ADC4D8100AD1A23 /* CustomerLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -284,6 +286,7 @@
 			children = (
 				F765F2E61AF7AA1100DEE184 /* Icon.png */,
 				F765F2E71AF7AA1100DEE184 /* Icon@2x.png */,
+				F7E8B8371B181B7000E12BA9 /* toolstats_target1.png */,
 				F765F2D21AF5672400DEE184 /* web.png */,
 				F765F2601AF2700600DEE184 /* halflings-39-qrcode_b1.png */,
 				F765F2611AF2700600DEE184 /* halflings-62-map-marker.png */,
@@ -445,6 +448,7 @@
 				F765F2BD1AF3980700DEE184 /* glyphicons-145-folder-open_b1.png in Resources */,
 				F765F2CE1AF3A6E100DEE184 /* glyphicons-145-folder-open_color.png in Resources */,
 				F765F2C31AF3982300DEE184 /* glyphicons-259-qrcode_b1.png in Resources */,
+				F7E8B8381B181B7000E12BA9 /* toolstats_target1.png in Resources */,
 				F765F2DD1AF5ED8700DEE184 /* map_new4.png in Resources */,
 				F793DCF11B0E0208009820E3 /* BeepV6.mp3 in Resources */,
 				F765F2641AF2700600DEE184 /* halflings-39-qrcode_b1.png in Resources */,
